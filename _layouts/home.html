@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ben Jackson Blog</title>
+  <link rel="stylesheet" href="{{ "/assets/css/styles.css" | relative_url }}">
+</head>
+<body>
+  <header class="site-header">
+    <h1 class="site-title">Ben Jackson</h1>
+    <p class="site-subtitle">Software, Platforms, and Systems</p>
+  </header>
+
+  <main class="posts-container">
+    {% for post in site.posts %}
+      <article class="blog-post">
+        <header class="post-header">
+          <h2 class="post-title">
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </h2>
+          <p class="post-meta">{{ post.date | date: "%B %d, %Y" }}</p>
+        </header>
+
+        <section class="post-excerpt">
+          {{ post.excerpt | strip_html | truncatewords: 30 }}
+        </section>
+      </article>
+    {% endfor %}
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025–{{ "now" | date: "%Y" }} Ben Jackson. All rights reserved.</p>
+  </footer>
+</body>
+</html>
