@@ -67,6 +67,13 @@ main {
     padding: 0 1rem;
 }
 
+/* Make the <a> behave like a block so it wraps the div correctly */
+.home-link {
+    display: block;      /* makes the <a> behave like a div */
+    text-decoration: none; /* removes the underline */
+    color: inherit;      /* keeps the text color from the div */
+}
+
 .blog-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
