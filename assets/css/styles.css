@@ -237,6 +237,7 @@ main {
 .back-link {
     color: #c2185b; /* Contrasting pink */
     text-decoration: none;
+    margin-bottom: 14px;
     position: relative;
     font-size: 18px;
     font-weight: bold;
