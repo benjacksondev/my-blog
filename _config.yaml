@@ -1,2 +1,8 @@
 url: "https://benjacksondev.github.io"
 baseurl: "" 
+
+defaults:
+  - scope:
+      path: "_posts"
+    values:
+      layout: post
