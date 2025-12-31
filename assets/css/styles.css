@@ -233,9 +233,9 @@ main {
     color: rgba(0,0,0,0.6);
     margin: 4rem 0 2rem;
 }
-  
+
 .back-link {
-    color: #ff69b4; /* Pink color */
+    color: #c2185b; /* Contrasting pink */
     text-decoration: none;
     position: relative;
     font-size: 18px;
@@ -243,19 +243,17 @@ main {
     display: inline-block;
   }
 
-  /* Line underneath */
   .back-link::after {
     content: '';
     position: absolute;
     left: 0;
-    bottom: -3px; /* Space between text and line */
+    bottom: -3px;
     width: 0%;
     height: 2px;
-    background-color: #ff69b4; /* Same pink */
+    background-color: #c2185b; /* Same pink */
     transition: width 0.3s ease;
   }
 
-  /* On hover, line expands */
   .back-link:hover::after {
     width: 100%;
   }
