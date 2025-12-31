@@ -36,6 +36,11 @@ header .logo {
     line-height: 1.1;
 }
 
+header .logo a {
+    text-decoration: none;
+    color: inherit;
+}
+
 header .subtitle {
     font-family: 'IBM Plex Sans', 'Inter', Arial, sans-serif;
     font-size: 1.1rem;
@@ -229,3 +234,28 @@ main {
     margin: 4rem 0 2rem;
 }
   
+.back-link {
+    color: #ff69b4; /* Pink color */
+    text-decoration: none;
+    position: relative;
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+  }
+
+  /* Line underneath */
+  .back-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px; /* Space between text and line */
+    width: 0%;
+    height: 2px;
+    background-color: #ff69b4; /* Same pink */
+    transition: width 0.3s ease;
+  }
+
+  /* On hover, line expands */
+  .back-link:hover::after {
+    width: 100%;
+  }
